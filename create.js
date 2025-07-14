@@ -4,7 +4,6 @@ const createPost = async (e) => {
     e.preventDefault();
 
     const doc = {
-        id: Math.random().toString(36).substring(2, 6),
         title: form.title.value,
         content: form.content.value
     };

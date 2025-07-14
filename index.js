@@ -1,3 +1,5 @@
+import { newsTitle } from './components/newsTitle.js';
+
 window.addEventListener('DOMContentLoaded', () => renderPosts());
 
 const container = document.querySelector('.container');
@@ -12,13 +14,20 @@ const renderPosts = async () => {
 
     posts.forEach(post => {
         template += `
-        <div class="post">
-            <p>${post.id}</p>
-            <h2>${post.title}</h2>
-            <p>${post.content.slice(0, 200)}</p>
-            <button class="btn">Skaityti plačiau</button>
-        </div>
+            <div class="bg-white rounded shadow p-6 border">
+                ${newsTitle(post.title, 2)}
+                <p class="text-gray-700 mt-2">${post.content.slice(0, 200)}...</p>
+                <a 
+                    href="details.html?id=${post.id}" 
+                    class="inline-block mt-4 text-blue-600 hover:underline font-medium"
+                >
+                    Skaityti plačiau
+                </a>
+            </div>
         `;
     })
     container.innerHTML = template;
 }
+
+
+// <h2 class="text-xl font-bold text-blue-700">${post.title}</h2>

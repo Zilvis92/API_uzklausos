@@ -4,19 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>API</title>
 </head>
-<body>
-    <div class="container"></div>
+<body class="bg-gray-100 font-sans">
 
-    <form>
-        <input type="text" name="title" placeholder="Įvesk pavadinimą" required />
-        <textarea name="content" placeholder="Įvesk turinį" required></textarea>
-        <button type="submit">Pridėti naujieną</button>
-    </form>
+    <div class="max-w-3xl mx-auto py-10 px-4">
+        <h1 class="text-3xl font-bold mb-6 text-center text-blue-700">Pridėti naują naujieną</h1>
 
-    <script src="/index.js" defer></script>
-    <script src="/detail.js" defer></script>
-    <script src="/create.js" defer></script>
+        <!-- Forma -->
+        <form class="bg-white shadow-md rounded p-6 mb-10 space-y-4 border">
+            <input 
+                type="text" 
+                name="title" 
+                placeholder="Įveskite pavadinimą" 
+                required 
+                class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
+            />
+            <textarea 
+                name="content" 
+                placeholder="Įveskite turinį" 
+                required 
+                class="w-full border border-gray-300 rounded px-4 py-2 h-32 resize-none focus:outline-none focus:ring-2 focus:ring-blue-400"
+            ></textarea>
+            <button 
+                type="submit" 
+                class="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-2 rounded shadow"
+            >
+                Pridėti naujieną
+            </button>
+        </form>
+
+        <!-- Naujienų sąrašas -->
+        <h1 class="text-2xl font-semibold mb-4 text-gray-700">Visos naujienos:</h1>
+        <div class="container space-y-6"></div>
+    </div>
+
+    <!-- JS -->
+    <script src="/index.js" defer type="module"></script>
+    <script src="create.js" defer></script>
+    <script src="detail.js" defer></script>
 </body>
 </html>
