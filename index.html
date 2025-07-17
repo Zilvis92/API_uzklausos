@@ -10,30 +10,17 @@
 <body class="bg-gray-100 font-sans">
 
     <div class="max-w-3xl mx-auto py-10 px-4">
-        <h1 class="text-3xl font-bold mb-6 text-center text-blue-700">Pridėti naują naujieną</h1>
+        <h1 class="text-3xl font-bold mb-6 text-center text-blue-700">Naujienos</h1>
 
-        <!-- Forma -->
-        <form class="bg-white shadow-md rounded p-6 mb-10 space-y-4 border">
-            <input 
-                type="text" 
-                name="title" 
-                placeholder="Įveskite pavadinimą" 
-                required 
-                class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
-            />
-            <textarea 
-                name="content" 
-                placeholder="Įveskite turinį" 
-                required 
-                class="w-full border border-gray-300 rounded px-4 py-2 h-32 resize-none focus:outline-none focus:ring-2 focus:ring-blue-400"
-            ></textarea>
-            <button 
-                type="submit" 
-                class="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-2 rounded shadow"
-            >
-                Pridėti naujieną
-            </button>
-        </form>
+       <!-- Mygtukas navigacijai į create.html -->
+    <div class="text-center mb-8">
+      <a 
+        href="create.html" 
+        class="inline-block bg-green-600 hover:bg-green-700 text-white font-semibold px-6 py-2 rounded shadow"
+      >
+        ➕ Pridėti naują naujieną
+      </a>
+    </div>
 
         <!-- Naujienų sąrašas -->
         <h1 class="text-2xl font-semibold mb-4 text-gray-700">Visos naujienos:</h1>
@@ -41,8 +28,8 @@
     </div>
 
     <!-- JS -->
-    <script src="/index.js" defer type="module"></script>
-    <script src="create.js" defer></script>
-    <script src="detail.js" defer></script>
+    <script src="/js/index.js" defer type="module"></script>
+    <script src="/js/create.js" defer></script>
+    <script src="/js/detail.js" defer></script>
 </body>
 </html>

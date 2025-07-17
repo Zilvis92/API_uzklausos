@@ -1,4 +1,5 @@
-import { newsTitle } from './components/newsTitle.js';
+import { newsTitle } from '../components/newsTitle.js';
+import { DetailContent } from '../components/detailContent.js';
 
 window.addEventListener('DOMContentLoaded', () => renderPosts());
 
@@ -15,8 +16,8 @@ const renderPosts = async () => {
     posts.forEach(post => {
         template += `
             <div class="bg-white rounded shadow p-6 border">
-                ${newsTitle(post.title, 2)}
-                <p class="text-gray-700 mt-2">${post.content.slice(0, 200)}...</p>
+                ${newsTitle({ title: post.title, type: 2 })}
+                ${DetailContent({ content: post.content })}
                 <a 
                     href="details.html?id=${post.id}" 
                     class="inline-block mt-4 text-blue-600 hover:underline font-medium"
@@ -31,3 +32,4 @@ const renderPosts = async () => {
 
 
 // <h2 class="text-xl font-bold text-blue-700">${post.title}</h2>
+//<p class="text-gray-700 mt-2">${post.content.slice(0, 200)}...</p>

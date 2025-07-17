@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Redaguoti naujieną</title>
+</head>
+<body class="bg-gray-100 font-sans">
+  <div class="max-w-3xl mx-auto py-10 px-4">
+    <h1 class="text-3xl font-bold mb-6 text-center text-yellow-700">Redaguoti naujieną</h1>
+
+    <form id="editForm" class="bg-white shadow-md rounded p-6 space-y-4 border">
+      <input 
+        type="text" 
+        name="title" 
+        placeholder="Pavadinimas" 
+        required 
+        class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+      />
+      <textarea 
+        name="content" 
+        placeholder="Turinys" 
+        required 
+        class="w-full border border-gray-300 rounded px-4 py-2 h-32 resize-none focus:outline-none focus:ring-2 focus:ring-yellow-400"
+      ></textarea>
+      <div class="flex justify-between">
+        <a href="index.html" class="text-gray-500 hover:underline">← Atšaukti</a>
+        <button 
+          type="submit" 
+          class="bg-yellow-600 hover:bg-yellow-700 text-white font-semibold px-6 py-2 rounded shadow"
+        >
+          Išsaugoti pakeitimus
+        </button>
+      </div>
+    </form>
+  </div>
+
+  <script src="js/edit.js" type="module" defer></script>
+</body>
+</html>
